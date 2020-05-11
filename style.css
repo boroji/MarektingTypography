@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: hsl(60, 100%, 50%);
+    --accent: hsl(240, 100%, 50%);
+    --negative: hsl(0, 0%, 100%);
+    --shadow: hsl(0, 0%, 0%);
+}
+
+body {
+    width: 100%;
+    display: grid;
+    grid: repeat(12, 80px) / repeat(18, 80px);
+    gap: 10px;
+    overflow-x: hidden;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2, h3, p {
+    text-transform: lowercase;
+    color: var(--shadow);
+}
+
+header {
+    background-color: var(--primary);
+    grid-area: 2 / 1 / span 1 / span 9;
+    border-radius: 0 50px 50px 0;
+    height: 40px;
+    align-self: flex-end;
+}
+
+h1 {
+    font-size: 60px;
+    grid-area: 3 / 1 / span 1 / span 9;
+    justify-self: flex-end;
+    font-weight: 100;
+}
+
+aside {
+    grid-area: 7 / 16 / 13 / span 1;
+    background-color: var(--primary);
+    border-radius: 50px 50px 0 0;
+    width: 20px;
+    justify-self: flex-end;
+}
+
+h2 {
+    grid-area: 3 / 16 / 8 / span 1;
+    font-size: 14px;
+    font-weight: 300;
+    writing-mode: vertical-rl;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    transform: rotate(180deg);
+    justify-self: flex-end;
+    align-self: flex-start;  
+}
+
+p {
+    grid-area: 7 / 13 / 13 / 17 ;
+    text-align: right;
+    font-size: 37px;
+    font-weight: 100;
+    align-self: center;
+    padding-right: 40px;
+}
+
+main {
+    background-color: var(--primary);
+    grid-area: 5 / 1 / 13 / span 9;
+    border-radius: 0 50px 0 0;
+}
+
+h3 {
+    font-size: 97px;
+    mix-blend-mode: darken;
+    text-shadow: 4px 4px 0px var(--accent);
+}
+
+h3:nth-of-type(1) {
+    grid-area: 11 / 6 / span 2 / 17;
+}
+
+h3:nth-of-type(2) {
+    grid-area: 6 / 2 / span 2 / 17;
+}
+
+button {
+    grid-area: 2 / 15 / span 1 / span 2;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: var(--accent);
+    color: var(--negative);
+    border-radius: 50px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
